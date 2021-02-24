@@ -1,0 +1,506 @@
+swagger: '2.0'
+info:
+  title: mushrooms
+  description: API specification for the Azure Machine Learning service mushrooms
+  version: '1.0'
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: 'For example: Bearer abc123'
+paths:
+  /:
+    get:
+      operationId: ServiceHealthCheck
+      description: Simple health check endpoint to ensure the service is up at any given point.
+      responses:
+        '200':
+          description: 'If service is up and running, this response will be returned with the content ''Healthy'''
+          schema:
+            type: string
+          examples:
+            application/json: Healthy
+        default:
+          description: The service failed to execute due to an error.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+  /score:
+    post:
+      operationId: RunMLService
+      description: Run web service's model and get the prediction output
+      security:
+        - Bearer: []
+      parameters:
+        - name: serviceInputPayload
+          in: body
+          description: The input payload for executing the real-time machine learning service.
+          schema:
+            $ref: '#/definitions/ServiceInput'
+      responses:
+        '200':
+          description: 'The service processed the input correctly and provided a result prediction, if applicable.'
+          schema:
+            $ref: '#/definitions/ServiceOutput'
+        default:
+          description: The service failed to execute due to an error.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+definitions:
+  ServiceInput:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          type: object
+          properties:
+            bruises:
+              type: boolean
+            gill_attachment:
+              type: boolean
+            cap_shape_b:
+              type: integer
+              format: int64
+            cap_shape_c:
+              type: integer
+              format: int64
+            cap_shape_f:
+              type: integer
+              format: int64
+            cap_shape_k:
+              type: integer
+              format: int64
+            cap_shape_s:
+              type: integer
+              format: int64
+            cap_shape_x:
+              type: integer
+              format: int64
+            cap_surface_f:
+              type: integer
+              format: int64
+            cap_surface_g:
+              type: integer
+              format: int64
+            cap_surface_s:
+              type: integer
+              format: int64
+            cap_surface_y:
+              type: integer
+              format: int64
+            cap_color_b:
+              type: integer
+              format: int64
+            cap_color_c:
+              type: integer
+              format: int64
+            cap_color_e:
+              type: integer
+              format: int64
+            cap_color_g:
+              type: integer
+              format: int64
+            cap_color_n:
+              type: integer
+              format: int64
+            cap_color_p:
+              type: integer
+              format: int64
+            cap_color_r:
+              type: integer
+              format: int64
+            cap_color_u:
+              type: integer
+              format: int64
+            cap_color_w:
+              type: integer
+              format: int64
+            cap_color_y:
+              type: integer
+              format: int64
+            odor_a:
+              type: integer
+              format: int64
+            odor_c:
+              type: integer
+              format: int64
+            odor_f:
+              type: integer
+              format: int64
+            odor_l:
+              type: integer
+              format: int64
+            odor_m:
+              type: integer
+              format: int64
+            odor_n:
+              type: integer
+              format: int64
+            odor_p:
+              type: integer
+              format: int64
+            odor_s:
+              type: integer
+              format: int64
+            odor_y:
+              type: integer
+              format: int64
+            gill_spacing_c:
+              type: integer
+              format: int64
+            gill_spacing_w:
+              type: integer
+              format: int64
+            gill_size_b:
+              type: integer
+              format: int64
+            gill_size_n:
+              type: integer
+              format: int64
+            gill_color_b:
+              type: integer
+              format: int64
+            gill_color_e:
+              type: integer
+              format: int64
+            gill_color_g:
+              type: integer
+              format: int64
+            gill_color_h:
+              type: integer
+              format: int64
+            gill_color_k:
+              type: integer
+              format: int64
+            gill_color_n:
+              type: integer
+              format: int64
+            gill_color_p:
+              type: integer
+              format: int64
+            gill_color_r:
+              type: integer
+              format: int64
+            gill_color_u:
+              type: integer
+              format: int64
+            gill_color_w:
+              type: integer
+              format: int64
+            gill_color_y:
+              type: integer
+              format: int64
+            stalk_shape_e:
+              type: integer
+              format: int64
+            stalk_shape_t:
+              type: integer
+              format: int64
+            stalk_root_?:
+              type: integer
+              format: int64
+            stalk_root_b:
+              type: integer
+              format: int64
+            stalk_root_c:
+              type: integer
+              format: int64
+            stalk_root_e:
+              type: integer
+              format: int64
+            stalk_root_r:
+              type: integer
+              format: int64
+            stalk_surface_above_ring_f:
+              type: integer
+              format: int64
+            stalk_surface_above_ring_k:
+              type: integer
+              format: int64
+            stalk_surface_above_ring_s:
+              type: integer
+              format: int64
+            stalk_surface_above_ring_y:
+              type: integer
+              format: int64
+            stalk_surface_below_ring_f:
+              type: integer
+              format: int64
+            stalk_surface_below_ring_k:
+              type: integer
+              format: int64
+            stalk_surface_below_ring_s:
+              type: integer
+              format: int64
+            stalk_surface_below_ring_y:
+              type: integer
+              format: int64
+            stalk_color_above_ring_b:
+              type: integer
+              format: int64
+            stalk_color_above_ring_c:
+              type: integer
+              format: int64
+            stalk_color_above_ring_e:
+              type: integer
+              format: int64
+            stalk_color_above_ring_g:
+              type: integer
+              format: int64
+            stalk_color_above_ring_n:
+              type: integer
+              format: int64
+            stalk_color_above_ring_p:
+              type: integer
+              format: int64
+            stalk_color_above_ring_w:
+              type: integer
+              format: int64
+            stalk_color_above_ring_y:
+              type: integer
+              format: int64
+            stalk_color_below_ring_b:
+              type: integer
+              format: int64
+            stalk_color_below_ring_c:
+              type: integer
+              format: int64
+            stalk_color_below_ring_e:
+              type: integer
+              format: int64
+            stalk_color_below_ring_g:
+              type: integer
+              format: int64
+            stalk_color_below_ring_n:
+              type: integer
+              format: int64
+            stalk_color_below_ring_p:
+              type: integer
+              format: int64
+            stalk_color_below_ring_w:
+              type: integer
+              format: int64
+            stalk_color_below_ring_y:
+              type: integer
+              format: int64
+            veil_type_p:
+              type: integer
+              format: int64
+            veil_color_w:
+              type: integer
+              format: int64
+            veil_color_y:
+              type: integer
+              format: int64
+            ring_number_n:
+              type: integer
+              format: int64
+            ring_number_o:
+              type: integer
+              format: int64
+            ring_number_t:
+              type: integer
+              format: int64
+            ring_type_e:
+              type: integer
+              format: int64
+            ring_type_f:
+              type: integer
+              format: int64
+            ring_type_l:
+              type: integer
+              format: int64
+            ring_type_n:
+              type: integer
+              format: int64
+            ring_type_p:
+              type: integer
+              format: int64
+            spore_print_color_h:
+              type: integer
+              format: int64
+            spore_print_color_k:
+              type: integer
+              format: int64
+            spore_print_color_n:
+              type: integer
+              format: int64
+            spore_print_color_r:
+              type: integer
+              format: int64
+            spore_print_color_u:
+              type: integer
+              format: int64
+            spore_print_color_w:
+              type: integer
+              format: int64
+            population_a:
+              type: integer
+              format: int64
+            population_c:
+              type: integer
+              format: int64
+            population_n:
+              type: integer
+              format: int64
+            population_s:
+              type: integer
+              format: int64
+            population_v:
+              type: integer
+              format: int64
+            population_y:
+              type: integer
+              format: int64
+            habitat_d:
+              type: integer
+              format: int64
+            habitat_g:
+              type: integer
+              format: int64
+            habitat_l:
+              type: integer
+              format: int64
+            habitat_m:
+              type: integer
+              format: int64
+            habitat_p:
+              type: integer
+              format: int64
+            habitat_u:
+              type: integer
+              format: int64
+            habitat_w:
+              type: integer
+              format: int64
+    example:
+      data:
+        - bruises: 'False'
+          gill_attachment: 'False'
+          cap_shape_b: 0
+          cap_shape_c: 0
+          cap_shape_f: 0
+          cap_shape_k: 0
+          cap_shape_s: 0
+          cap_shape_x: 0
+          cap_surface_f: 0
+          cap_surface_g: 0
+          cap_surface_s: 0
+          cap_surface_y: 0
+          cap_color_b: 0
+          cap_color_c: 0
+          cap_color_e: 0
+          cap_color_g: 0
+          cap_color_n: 0
+          cap_color_p: 0
+          cap_color_r: 0
+          cap_color_u: 0
+          cap_color_w: 0
+          cap_color_y: 0
+          odor_a: 0
+          odor_c: 0
+          odor_f: 0
+          odor_l: 0
+          odor_m: 0
+          odor_n: 0
+          odor_p: 0
+          odor_s: 0
+          odor_y: 0
+          gill_spacing_c: 0
+          gill_spacing_w: 0
+          gill_size_b: 0
+          gill_size_n: 0
+          gill_color_b: 0
+          gill_color_e: 0
+          gill_color_g: 0
+          gill_color_h: 0
+          gill_color_k: 0
+          gill_color_n: 0
+          gill_color_p: 0
+          gill_color_r: 0
+          gill_color_u: 0
+          gill_color_w: 0
+          gill_color_y: 0
+          stalk_shape_e: 0
+          stalk_shape_t: 0
+          stalk_root_?: 0
+          stalk_root_b: 0
+          stalk_root_c: 0
+          stalk_root_e: 0
+          stalk_root_r: 0
+          stalk_surface_above_ring_f: 0
+          stalk_surface_above_ring_k: 0
+          stalk_surface_above_ring_s: 0
+          stalk_surface_above_ring_y: 0
+          stalk_surface_below_ring_f: 0
+          stalk_surface_below_ring_k: 0
+          stalk_surface_below_ring_s: 0
+          stalk_surface_below_ring_y: 0
+          stalk_color_above_ring_b: 0
+          stalk_color_above_ring_c: 0
+          stalk_color_above_ring_e: 0
+          stalk_color_above_ring_g: 0
+          stalk_color_above_ring_n: 0
+          stalk_color_above_ring_p: 0
+          stalk_color_above_ring_w: 0
+          stalk_color_above_ring_y: 0
+          stalk_color_below_ring_b: 0
+          stalk_color_below_ring_c: 0
+          stalk_color_below_ring_e: 0
+          stalk_color_below_ring_g: 0
+          stalk_color_below_ring_n: 0
+          stalk_color_below_ring_p: 0
+          stalk_color_below_ring_w: 0
+          stalk_color_below_ring_y: 0
+          veil_type_p: 0
+          veil_color_w: 0
+          veil_color_y: 0
+          ring_number_n: 0
+          ring_number_o: 0
+          ring_number_t: 0
+          ring_type_e: 0
+          ring_type_f: 0
+          ring_type_l: 0
+          ring_type_n: 0
+          ring_type_p: 0
+          spore_print_color_h: 0
+          spore_print_color_k: 0
+          spore_print_color_n: 0
+          spore_print_color_r: 0
+          spore_print_color_u: 0
+          spore_print_color_w: 0
+          population_a: 0
+          population_c: 0
+          population_n: 0
+          population_s: 0
+          population_v: 0
+          population_y: 0
+          habitat_d: 0
+          habitat_g: 0
+          habitat_l: 0
+          habitat_m: 0
+          habitat_p: 0
+          habitat_u: 0
+          habitat_w: 0
+  ServiceOutput:
+    type: array
+    items:
+      type: integer
+      format: int64
+    example:
+      - 0
+  ErrorResponse:
+    type: object
+    properties:
+      status_code:
+        type: integer
+        format: int32
+      message:
+        type: string
