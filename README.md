@@ -429,6 +429,10 @@ ACI service creation operation finished, operation "Succeeded"
 Healthy
 ```
 
+The active Endpoint in th UI
+
+![best Model](assets/endpoint1.png)
+
 When the ACI is running you can check the [Swagger](swagger.yaml) file
 and call the endpoint with an auth key:
 
