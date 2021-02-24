@@ -3,6 +3,18 @@ Use an old dataset to classify the edibility of mushrooms with Azure Machine Lea
 
 ![Mushroom](assets/head.JPG)
 
+## Project Overview
+In this project, I will create two models: one using Automated ML a.k.a. AutoML and one customized 
+Logistic Regression model whose hyperparameters "C" (inverse of regularization strength) and the
+maximum iteration are tuned using HyperDrive. 
+I then compare the performance of both the models and deploy the best performing one.
+
+I will use an external dataset (a collection of samples of gilled mushrooms), import it in the workspace, 
+train a model using the different tools  available in the AzureML framework as well as deploy 
+the model as a web service.
+
+![Mushroom](assets/capstone-diagram.png)
+
 ## Project Set Up and Installation
 
 + export the settings json to the notebook folder
@@ -171,6 +183,8 @@ reg_alpha=0.0, reg_lambda=0.0, silent=True,
 subsample=1.0, subsample_for_bin=200000,
 subsample_freq=0, verbose=-10))
 ```
+The best model with its id and metrics in notebook
+![best Model notebook](assets/automl_00008.png)
 
 The best model with its metrics in the UI
 ![best Model](assets/automl_00007.png)
@@ -235,7 +249,13 @@ The running hyperdrive.
 ![running hyperdrive](assets/hyper2.png)
 
 The RunDetails of the hyperdrive triggered from the notebook.
-![run details](assets/hyper3.png)
+![run details](assets/hyper4.png)
+
+The best model of the hyperdrive and its metrics.
+![best model](assets/hyper5.png)
+
+The registed best model in the UI
+![best model](assets/hyper6.png)
 
 ## Model Deployment
 For this we use the best model form the AutoML run and this needs to be registered before we can deploy it.
@@ -578,4 +598,4 @@ one-hot encoding in the preprocessing. A quick fix for this can be done by in th
 script where its possible to map from the original data schema to the one-hot encoded one.
 
 ## Screen Recording
-[![Screencast](https://img.youtube.com/vi/wYU2jx_C1WI/0.jpg)](https://youtu.be/wYU2jx_C1WI)
+[![Screencast](https://img.youtube.com/vi/F2awLl-ewsw/0.jpg)](https://youtu.be/F2awLl-ewsw)

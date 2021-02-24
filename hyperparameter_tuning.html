@@ -13190,11 +13190,16 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>quick-starts-ws-139396
-aml-quickstarts-139396
+<pre>quick-starts-ws-139435
+aml-quickstarts-139435
 southcentralus
-81cefad3-d2c9-4f77-a466-99a7f541c7bb
-Found existing cluster, use it.
+2c48c51c-bd47-40d4-abbe-fb8eabd19c8c
+Creating
+Succeeded................................................................................................................
+AmlCompute wait for completion finished
+
+Wait timeout has been reached
+Current provisioning state of AmlCompute is &#34;Succeeded&#34; and current node count is &#34;0&#34;
 </pre>
 </div>
 </div>
@@ -13437,7 +13442,7 @@ Found existing cluster, use it.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.core</span> <span class="kn">import</span> <span class="n">Environment</span>
 
-<span class="n">sklearn_env</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="n">from_conda_specification</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;sklearn-env&#39;</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="s1">&#39;conda_dependencies.yml&#39;</span><span class="p">)</span>
+<span class="n">sklearn_env</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="n">from_conda_specification</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;sklearn-env&#39;</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="s1">&#39;sklearn_dependencies.yml&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13531,13 +13536,13 @@ Found existing cluster, use it.
 
  
  
-<div id="a9d5b666-a471-4f1f-8066-76ecab16feef"></div>
+<div id="307743bc-f359-4aea-9999-446680904a5d"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#a9d5b666-a471-4f1f-8066-76ecab16feef');
+var element = $('#307743bc-f359-4aea-9999-446680904a5d');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "6af0bb640ca24bc9a5ca03e631e0c452", "version_major": 2, "version_minor": 0}
+{"model_id": "4a43f7f231394dcda5af080b31245d1b", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13559,18 +13564,18 @@ var element = $('#a9d5b666-a471-4f1f-8066-76ecab16feef');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>RunId: HD_b1ca1680-5e10-484b-9e90-454175bac2b7
-Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_b1ca1680-5e10-484b-9e90-454175bac2b7?wsid=/subscriptions/81cefad3-d2c9-4f77-a466-99a7f541c7bb/resourcegroups/aml-quickstarts-139396/workspaces/quick-starts-ws-139396
+<pre>RunId: HD_0c98fa72-9cf1-494f-b800-30bad50685fe
+Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_0c98fa72-9cf1-494f-b800-30bad50685fe?wsid=/subscriptions/2c48c51c-bd47-40d4-abbe-fb8eabd19c8c/resourcegroups/aml-quickstarts-139435/workspaces/quick-starts-ws-139435
 
 Streaming azureml-logs/hyperdrive.txt
 =====================================
 
-&#34;&lt;START&gt;[2021-02-23T20:07:02.873433][API][INFO]Experiment created&lt;END&gt;\n&#34;&#34;&lt;START&gt;[2021-02-23T20:07:03.695374][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space&lt;END&gt;\n&#34;&#34;&lt;START&gt;[2021-02-23T20:07:03.976950][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.&lt;END&gt;\n&#34;&lt;START&gt;[2021-02-23T20:07:04.8213867Z][SCHEDULER][INFO]The execution environment is being prepared. Please be patient as it can take a few minutes.&lt;END&gt;
+&lt;START&gt;[2021-02-24T17:14:18.3755062Z][SCHEDULER][INFO]The execution environment is being prepared. Please be patient as it can take a few minutes.&lt;END&gt;&#34;&lt;START&gt;[2021-02-24T17:14:18.385208][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space&lt;END&gt;\n&#34;&#34;&lt;START&gt;[2021-02-24T17:14:17.287917][API][INFO]Experiment created&lt;END&gt;\n&#34;&#34;&lt;START&gt;[2021-02-24T17:14:18.544584][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.&lt;END&gt;\n&#34;
 
 Execution Summary
 =================
-RunId: HD_b1ca1680-5e10-484b-9e90-454175bac2b7
-Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_b1ca1680-5e10-484b-9e90-454175bac2b7?wsid=/subscriptions/81cefad3-d2c9-4f77-a466-99a7f541c7bb/resourcegroups/aml-quickstarts-139396/workspaces/quick-starts-ws-139396
+RunId: HD_0c98fa72-9cf1-494f-b800-30bad50685fe
+Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_0c98fa72-9cf1-494f-b800-30bad50685fe?wsid=/subscriptions/2c48c51c-bd47-40d4-abbe-fb8eabd19c8c/resourcegroups/aml-quickstarts-139435/workspaces/quick-starts-ws-139435
 
 </pre>
 </div>
@@ -13584,24 +13589,24 @@ Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_b1ca1680-5e10-484b-9
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;runId&#39;: &#39;HD_b1ca1680-5e10-484b-9e90-454175bac2b7&#39;,
+<pre>{&#39;runId&#39;: &#39;HD_0c98fa72-9cf1-494f-b800-30bad50685fe&#39;,
  &#39;target&#39;: &#39;comp&#39;,
  &#39;status&#39;: &#39;Completed&#39;,
- &#39;startTimeUtc&#39;: &#39;2021-02-23T20:07:02.514988Z&#39;,
- &#39;endTimeUtc&#39;: &#39;2021-02-23T20:38:44.033528Z&#39;,
+ &#39;startTimeUtc&#39;: &#39;2021-02-24T17:14:17.069958Z&#39;,
+ &#39;endTimeUtc&#39;: &#39;2021-02-24T17:45:27.042411Z&#39;,
  &#39;properties&#39;: {&#39;primary_metric_config&#39;: &#39;{&#34;name&#34;: &#34;Accuracy&#34;, &#34;goal&#34;: &#34;maximize&#34;}&#39;,
   &#39;resume_from&#39;: &#39;null&#39;,
   &#39;runTemplate&#39;: &#39;HyperDrive&#39;,
   &#39;azureml.runsource&#39;: &#39;hyperdrive&#39;,
   &#39;platform&#39;: &#39;AML&#39;,
-  &#39;ContentSnapshotId&#39;: &#39;bb59235f-b117-441f-b695-83fbb6fd5457&#39;,
+  &#39;ContentSnapshotId&#39;: &#39;fb1dd880-2306-47fb-9bac-bcb611807aa0&#39;,
   &#39;score&#39;: &#39;1.0&#39;,
-  &#39;best_child_run_id&#39;: &#39;HD_b1ca1680-5e10-484b-9e90-454175bac2b7_0&#39;,
+  &#39;best_child_run_id&#39;: &#39;HD_0c98fa72-9cf1-494f-b800-30bad50685fe_3&#39;,
   &#39;best_metric_status&#39;: &#39;Succeeded&#39;},
  &#39;inputDatasets&#39;: [],
  &#39;outputDatasets&#39;: [],
- &#39;logFiles&#39;: {&#39;azureml-logs/hyperdrive.txt&#39;: &#39;https://mlstrg139396.blob.core.windows.net/azureml/ExperimentRun/dcid.HD_b1ca1680-5e10-484b-9e90-454175bac2b7/azureml-logs/hyperdrive.txt?sv=2019-02-02&amp;sr=b&amp;sig=w3OBQ8FCKoxPc7MgUatjkItvLTUZJ4EtHQYDlomMtig%3D&amp;st=2021-02-23T20%3A28%3A59Z&amp;se=2021-02-24T04%3A38%3A59Z&amp;sp=r&#39;},
- &#39;submittedBy&#39;: &#39;ODL_User 139396&#39;}</pre>
+ &#39;logFiles&#39;: {&#39;azureml-logs/hyperdrive.txt&#39;: &#39;https://mlstrg139435.blob.core.windows.net/azureml/ExperimentRun/dcid.HD_0c98fa72-9cf1-494f-b800-30bad50685fe/azureml-logs/hyperdrive.txt?sv=2019-02-02&amp;sr=b&amp;sig=4cVReJqC2sByLT%2FcL1z1p7j7logPY03tk6M6UongC9s%3D&amp;st=2021-02-24T17%3A35%3A30Z&amp;se=2021-02-25T01%3A45%3A30Z&amp;sp=r&#39;},
+ &#39;submittedBy&#39;: &#39;ODL_User 139435&#39;}</pre>
 </div>
 
 </div>
@@ -13620,7 +13625,7 @@ Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_b1ca1680-5e10-484b-9
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Save the best model</span>
@@ -13660,8 +13665,8 @@ Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_b1ca1680-5e10-484b-9
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;--C&#39;, &#39;0.6023091332838605&#39;, &#39;--max_iter&#39;, &#39;100&#39;]
-{&#39;Regularization Strength:&#39;: 0.6023091332838605, &#39;Max iterations:&#39;: 100, &#39;Accuracy&#39;: 1.0}
+<pre>[&#39;--C&#39;, &#39;0.6044862111775062&#39;, &#39;--max_iter&#39;, &#39;50&#39;]
+{&#39;Regularization Strength:&#39;: 0.6044862111775062, &#39;Max iterations:&#39;: 50, &#39;Accuracy&#39;: 1.0}
 </pre>
 </div>
 </div>
@@ -13679,40 +13684,97 @@ Web View: https://ml.azure.com/experiments/Mushroom/runs/HD_b1ca1680-5e10-484b-9
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-    #T_4c51ef0c_7617_11eb_a665_91829e700be9row0_col0 {
+    #T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row0_col0 {
             background-color:  #63a8d3;
             color:  #000000;
-        }    #T_4c51ef0c_7617_11eb_a665_91829e700be9row0_col1 {
+        }    #T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row0_col1 {
             background-color:  #f7fbff;
             color:  #000000;
-        }    #T_4c51ef0c_7617_11eb_a665_91829e700be9row1_col0 {
+        }    #T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row1_col0 {
             background-color:  #f7fbff;
             color:  #000000;
-        }    #T_4c51ef0c_7617_11eb_a665_91829e700be9row1_col1 {
+        }    #T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row1_col1 {
             background-color:  #63a8d3;
             color:  #000000;
-        }</style><table id="T_4c51ef0c_7617_11eb_a665_91829e700be9" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >0</th>        <th class="col_heading level0 col1" >1</th>    </tr></thead><tbody>
+        }</style><table id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >0</th>        <th class="col_heading level0 col1" >1</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_4c51ef0c_7617_11eb_a665_91829e700be9level0_row0" class="row_heading level0 row0" >0</th>
-                        <td id="T_4c51ef0c_7617_11eb_a665_91829e700be9row0_col0" class="data row0 col0" >3896</td>
-                        <td id="T_4c51ef0c_7617_11eb_a665_91829e700be9row0_col1" class="data row0 col1" >2</td>
+                        <th id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38level0_row0" class="row_heading level0 row0" >0</th>
+                        <td id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row0_col0" class="data row0 col0" >3896</td>
+                        <td id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row0_col1" class="data row0 col1" >2</td>
             </tr>
             <tr>
-                        <th id="T_4c51ef0c_7617_11eb_a665_91829e700be9level0_row1" class="row_heading level0 row1" >1</th>
-                        <td id="T_4c51ef0c_7617_11eb_a665_91829e700be9row1_col0" class="data row1 col0" >0</td>
-                        <td id="T_4c51ef0c_7617_11eb_a665_91829e700be9row1_col1" class="data row1 col1" >4016</td>
+                        <th id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38level0_row1" class="row_heading level0 row1" >1</th>
+                        <td id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row1_col0" class="data row1 col0" >0</td>
+                        <td id="T_376f4dd0_76c8_11eb_8bef_5535b77f7d38row1_col1" class="data row1 col1" >4016</td>
             </tr>
     </tbody></table>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Deployment">Model Deployment<a class="anchor-link" href="#Model-Deployment">&#182;</a></h2><p>register the model</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Register model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">best_run</span><span class="o">.</span><span class="n">register_model</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;mushrooms_hyper&#39;</span><span class="p">,</span>
+                               <span class="n">tags</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;typ&#39;</span><span class="p">:</span> <span class="s1">&#39;LogisticRegression&#39;</span><span class="p">},</span>
+                               <span class="n">model_path</span><span class="o">=</span><span class="s1">&#39;outputs/model.joblib&#39;</span><span class="p">,</span>
+                               <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;best hyperdrive model&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mushrooms_hyper	mushrooms_hyper:1	1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
