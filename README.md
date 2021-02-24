@@ -37,6 +37,29 @@ The data from UCI can be downloaded [here](https://archive.ics.uci.edu/ml/machin
 the description of the set is available [here](https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/agaricus-lepiota.names).
 I added a csv to this repo, to have the column names and the data in one file [here](https://raw.githubusercontent.com/mixmasteru/MLEND-capstone/main/data/mushrooms.csv)
 
+### Import
+
+First we register the input data as dataset in our workspace by
+using Dataset.Tabular.from_delimited_files:
+```python
+found = False
+if ds_key in ws.datasets.keys():
+        found = True
+        dataset = ws.datasets[ds_key]
+
+if not found:
+        # Create AML Dataset and register it into Workspace
+        example_data = 'https://raw.githubusercontent.com/mixmasteru/MLEND-capstone/main/data/mushrooms.csv'
+        dataset = Dataset.Tabular.from_delimited_files(example_data)
+        #Register Dataset in Workspace
+        dataset = dataset.register(workspace=ws,
+                                   name=ds_key,
+                                   description=ds_description_text)
+df = dataset.to_pandas_dataframe()
+df.describe()
+dataset.take(5).to_pandas_dataframe()
+```
+
 ### Preprocessing
 
 In the train.py is a clean_data method which one-hot encode all Categorical data.
