@@ -126,32 +126,30 @@ This is the list in the UI
 ![model list](assets/automl_00004.png)
 
 The python call in the notebook returned MaxAbsScaler + LightGBM as best model. 
-```json
-{
-  'recall_score_weighted': 1.0,
-  'norm_macro_recall': 1.0,
-  'AUC_weighted': 1.0,
-  'f1_score_micro': 1.0,
-  'f1_score_weighted': 1.0,
-  'precision_score_macro': 1.0,
-  'average_precision_score_micro': 1.0,
-  'AUC_micro': 1.0,
-  'accuracy': 1.0,
-  'recall_score_micro': 1.0,
-  'average_precision_score_macro': 1.0,
-  'AUC_macro': 1.0,
-  'balanced_accuracy': 1.0,
-  'precision_score_micro': 1.0,
-  'matthews_correlation': 1.0,
-  'average_precision_score_weighted': 1.0,
-  'precision_score_weighted': 1.0,
-  'log_loss': 2.997299456938485e-05,
-  'recall_score_macro': 1.0,
-  'weighted_accuracy': 1.0,
-  'f1_score_macro': 1.0,
-  'confusion_matrix': 'aml://artifactId/ExperimentRun/dcid.AutoML_d359eaa0-48aa-408b-8e40-74fb6f77cad7_0/confusion_matrix',
-  'accuracy_table': 'aml://artifactId/ExperimentRun/dcid.AutoML_d359eaa0-48aa-408b-8e40-74fb6f77cad7_0/accuracy_table'
-}
+```python
+'recall_score_weighted': 1.0,
+'norm_macro_recall': 1.0,
+'AUC_weighted': 1.0,
+'f1_score_micro': 1.0,
+'f1_score_weighted': 1.0,
+'precision_score_macro': 1.0,
+'average_precision_score_micro': 1.0,
+'AUC_micro': 1.0,
+'accuracy': 1.0,
+'recall_score_micro': 1.0,
+'average_precision_score_macro': 1.0,
+'AUC_macro': 1.0,
+'balanced_accuracy': 1.0,
+'precision_score_micro': 1.0,
+'matthews_correlation': 1.0,
+'average_precision_score_weighted': 1.0,
+'precision_score_weighted': 1.0,
+'log_loss': 2.997299456938485e-05,
+'recall_score_macro': 1.0,
+'weighted_accuracy': 1.0,
+'f1_score_macro': 1.0,
+'confusion_matrix': 'aml://artifactId/ExperimentRun/dcid.AutoML_d359eaa0-48aa-408b-8e40-74fb6f77cad7_0/confusion_matrix',
+'accuracy_table': 'aml://artifactId/ExperimentRun/dcid.AutoML_d359eaa0-48aa-408b-8e40-74fb6f77cad7_0/accuracy_table'
 
 'datatransformer',
 DataTransformer(enable_dnn=None, enable_feature_sweeping=None,
